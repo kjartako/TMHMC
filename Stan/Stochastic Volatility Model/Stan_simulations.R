@@ -31,7 +31,7 @@ for (i in 1:nchains)
 ###################################################################################
 ###################################################################################
 ###################################################################################
-res = sampling(sm,data=list(N=n_y,y=y),iter=2000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("gamma","delta","v"))  
+res = sampling(sm,data=list(N=n_y,y=y),iter=11000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("gamma","delta","v"))  
 
 coda=As.mcmc.list(res)
 summary(coda)$statistics
