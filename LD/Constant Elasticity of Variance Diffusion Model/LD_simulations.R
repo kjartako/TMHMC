@@ -20,8 +20,8 @@ npar=length(Par0)
 
 n_reg=1
 chains = 8
-n_burnin=500
-n_sample=1000
+n_burnin=1000
+n_sample=10000
 N = n_burnin+n_sample
 Ls = rep(3,N)
 epsilons = rep(0.57,N)
