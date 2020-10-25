@@ -38,14 +38,14 @@ nchains=8
 sm = stan_model('Stan_Prior.stan',auto_write=TRUE) 
 #sm = stan_model('Stan_Laplace.stan',auto_write=TRUE) 
 
-res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets),iter=2000, warmup = 1000,
+res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets),iter=11000, warmup = 1000,
                seed=123, chains=nchains,pars=c("mu","sigmaSq","delta","hts","nu","firstx","firstz","lastz"))  
 
-# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=0),iter=2000, warmup = 1000,
+# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=0),iter=11000, warmup = 1000,
 #                 seed=123, chains=nchains,pars=c("mu","sigmaSq","delta","hts","nu","firstx","firstz","lastz"))  
-# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=1),iter=2000, warmup = 1000,
+# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=1),iter=11000, warmup = 1000,
 #                 seed=123, chains=nchains,pars=c("mu","sigmaSq","delta","hts","nu","firstx","firstz","lastz"))  
-# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=2),iter=2000, warmup = 1000,
+# res = sampling(sm,data=list(T=T,yy=yy,yinv=yinv,ldets=ldets,niter=2),iter=11000, warmup = 1000,
 #                 seed=123, chains=nchains,pars=c("mu","sigmaSq","delta","hts","nu","firstx","firstz","lastz"))  
 
 
