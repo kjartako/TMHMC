@@ -30,8 +30,8 @@ for (i in 1:nchains)
 ###################################################################################
 ###################################################################################
 ###################################################################################
-res = sampling(sm,data=list(N=n_y,y=y),iter=2000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("tau","beta","delta","v"))
-#res = sampling(sm,data=list(N=n_y,y=y),iter=2000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("tau","beta","delta","v"),control = list(max_treedepth = 6))
+res = sampling(sm,data=list(N=n_y,y=y),iter=11000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("tau","beta","delta","v"))
+#res = sampling(sm,data=list(N=n_y,y=y),iter=11000, warmup = 1000, seed=123, chains=nchains,init=myinits,pars=c("tau","beta","delta","v"),control = list(max_treedepth = 6))
 
 coda=As.mcmc.list(res)
 summary(coda)$statistics
