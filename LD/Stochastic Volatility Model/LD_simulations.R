@@ -21,8 +21,8 @@ Par0=c(-0.02032639,2.23705620,-3.85967962)
 npar=length(Par0)
 
 n_yeg=2
-n_burnin=500
-n_sample=1000
+n_burnin=1000
+n_sample=10000
 N = n_burnin+n_sample
 Ls = rep(4,N)
 epsilons = rep(0.4,N)
