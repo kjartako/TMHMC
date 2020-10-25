@@ -29,7 +29,7 @@ for (i in 1:nchains)
 ###################################################################################
 ###################################################################################
 ###################################################################################
-res = sampling(sm,data=list(N=n_y,y=y,Delta=Delta,Nreg=1),iter=2000, warmup = 1000, seed=123, chains=nchains,
+res = sampling(sm,data=list(N=n_y,y=y,Delta=Delta,Nreg=1),iter=11000, warmup = 1000, seed=123, chains=nchains,
                   init=myinits,pars=c("alpha","beta","gamma","sx","sy"))
 
 coda=As.mcmc.list(res)
