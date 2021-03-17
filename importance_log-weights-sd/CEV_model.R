@@ -202,10 +202,17 @@ for(w in 1:2)
   }
   print(paste0("Laplace, K = ",w))
   print(sd(lwts.lapK))
+  t <- lwts.lapK # ESS calculations
+  wts <- exp(t-max(t))
+  wts <- wts/sum(wts)
+  print(1/sum(wts^2))
   
 }
 
 
 print("EIS")
 print(sd(lwts.EIS))
-
+t <- lwts.EIS # ESS calculations
+wts <- exp(t-max(t))
+wts <- wts/sum(wts)
+print(1/sum(wts^2))

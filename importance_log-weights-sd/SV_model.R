@@ -194,9 +194,25 @@ for(i in 1:nrep){
 
 print("EIS")
 print(sd(lwts.EIS))
+t <- lwts.EIS # ESS calculations
+wts <- exp(t-max(t))
+wts <- wts/sum(wts)
+print(1/sum(wts^2))
 print("prior")
 print(sd(lwts.prior))
+t <- lwts.prior # ESS calculations
+wts <- exp(t-max(t))
+wts <- wts/sum(wts)
+print(1/sum(wts^2))
 print("Laplace0")
 print(sd(lwts.lap0))
+t <- lwts.lap0 # ESS calculations
+wts <- exp(t-max(t))
+wts <- wts/sum(wts)
+print(1/sum(wts^2))
 print("LaplaceK")
 print(sd(lwts.lapK))
+t <- lwts.lapK # ESS calculations
+wts <- exp(t-max(t))
+wts <- wts/sum(wts)
+print(1/sum(wts^2))
