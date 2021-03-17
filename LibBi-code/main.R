@@ -11,8 +11,8 @@ model <- bi_model("StochasticVolatility.bi")
 
 bi <- libbi(model)
 
-nsamples <- 20000
-nburnin <- 10000
+nsamples <- 11000
+nburnin <- 1000
 nrep <- 8
 llist <- list()
 
@@ -40,4 +40,4 @@ for(rep in 1:nrep){
 
 out <- as.mcmc.list(llist)
 
-save.image("Computations")
+save.image("Computations_new")

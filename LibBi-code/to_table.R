@@ -1,5 +1,5 @@
 library(coda)
-#load("Computations")
+load("Computations_new")
 
 
 means <- matrix(0.0,3,8)
